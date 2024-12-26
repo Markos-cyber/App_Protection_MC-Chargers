@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.gradle.internal.Kapt3GradleSubplugin.Companion.isKaptVerbose
+import org.jetbrains.kotlin.gradle.model.Kapt
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.example.app_protection_mc_chargers"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.app_protection_mc_chargers"
@@ -41,6 +44,15 @@ android {
 
 dependencies {
 
+    implementation (libs.ui)
+    implementation (libs.material3)
+    implementation (libs.ui.tooling.preview)
+    implementation(libs.androidx.foundation.layout.android)
+    implementation(libs.androidx.foundation.android)
+    debugImplementation (libs.ui.tooling)
+    implementation (libs.hilt.android.v249)
+    implementation (libs.androidx.hilt.navigation.compose.v100)
+    implementation (libs.jetbrains.kotlinx.coroutines.android)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
