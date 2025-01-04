@@ -1,5 +1,6 @@
 package com.example.app_protection_mc_chargers
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -47,12 +48,11 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -77,7 +77,6 @@ fun AppNavigation() {
         composable("gridScreen") { GridScreen(navController) }
         composable("detailsScreen/{itemId}") { backStackEntry ->
             val itemId = backStackEntry.arguments?.getString("itemId")
-            DetailsScreen(itemId = itemId)
         }
     }
 }
@@ -151,7 +150,32 @@ fun GridScreen(navController: NavController) {
         ) {
             items(filteredItems, key = { it.id }) { item ->
                 GridItemCard(item = item, interactionSource) {
-                    navController.navigate("detailsScreen/${item.id}")
+                    when (item.id) {
+                        "1" -> {
+                            val context = LocalContext.current
+                            context.startActivity(Intent(context, OrionMiniActivity::class.java))
+                        }
+                        "2" -> {
+                            val context = LocalContext.current
+                            context.startActivity(Intent(context, OrionMidiActivity::class.java))
+                        }
+                        "3" -> {
+                            val context = LocalContext.current
+                            context.startActivity(Intent(context, Orion_7_11_22Activity::class.java))
+                        }
+                        "4" -> {
+                            val context = LocalContext.current
+                            context.startActivity(Intent(context, Orion2x11_2x22Activity::class.java))
+                        }
+                        "5" -> {
+                            val context = LocalContext.current
+                            context.startActivity(Intent(context, PrismaActivity::class.java))
+                        }
+                        "6" -> {
+                            val context = LocalContext.current
+                            context.startActivity(Intent(context, POSeidonActivity::class.java))
+                        }
+                    }
                 }
             }
         }
@@ -159,14 +183,39 @@ fun GridScreen(navController: NavController) {
 }
 
 
+
 @Composable
-fun GridItemCard(item: GridItem, interactionSource: MutableInteractionSource, onClick: () -> Unit) {
+fun GridItemCard(item: GridItem, interactionSource: MutableInteractionSource, onClick: @Composable () -> Unit) {
+    val context = LocalContext.current // Ensure this is inside a Composable
+
     Card(
         modifier = Modifier
             .clickable(
                 interactionSource = interactionSource,
                 indication = ripple(bounded = true, color = MaterialTheme.colorScheme.primary),
-                onClick = onClick
+                onClick = {
+                    // Handle navigation here
+                    when (item.id) {
+                        "1" -> {
+                            context.startActivity(Intent(context, OrionMiniActivity::class.java))
+                        }
+                        "2" -> {
+                            context.startActivity(Intent(context, OrionMidiActivity::class.java))
+                        }
+                        "3" -> {
+                            context.startActivity(Intent(context, Orion_7_11_22Activity::class.java))
+                        }
+                        "4" -> {
+                            context.startActivity(Intent(context, Orion2x11_2x22Activity::class.java))
+                        }
+                        "5" -> {
+                            context.startActivity(Intent(context, PrismaActivity::class.java))
+                            }
+                        "6" -> {
+                            context.startActivity(Intent(context, POSeidonActivity::class.java))
+                        }
+                    }
+                }
             )
             .fillMaxWidth(),
         elevation = CardDefaults.cardElevation(4.dp),
@@ -191,16 +240,6 @@ fun GridItemCard(item: GridItem, interactionSource: MutableInteractionSource, on
                 color = MaterialTheme.colorScheme.primary
             )
         }
-    }
-}
-
-@Composable
-fun DetailsScreen(itemId: String?) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(text = "Details for Item $itemId", style = MaterialTheme.typography.displaySmall)
     }
 }
 
