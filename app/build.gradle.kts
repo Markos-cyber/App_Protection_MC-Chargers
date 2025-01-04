@@ -45,6 +45,11 @@ android {
 dependencies {
 
     implementation (libs.ui)
+    implementation (libs.material3.v120)
+    implementation (libs.androidx.ui.v150)
+    implementation (libs.androidx.foundation)
+    implementation (libs.androidx.runtime)
+    implementation(libs.coil.compose)
     implementation (libs.material3)
     implementation (libs.ui.tooling.preview)
     implementation(libs.androidx.foundation.layout.android)
