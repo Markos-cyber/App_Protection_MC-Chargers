@@ -25,6 +25,12 @@
         </activity>
         <activity android:name=".MainActivity"
                   android:exported="true"/>
+        <activity android:name=".OrionMiniActivity" />
+        <activity android:name=".OrionMidiActivity" />
+        <activity android:name=".Orion_7_11_22Activity" />
+        <activity android:name=".Orion2x11_2x22Activity" />
+        <activity android:name=".PrismaActivity" />
+        <activity android:name=".POSeidonActivity" />
     </application>
 
 </manifest>
