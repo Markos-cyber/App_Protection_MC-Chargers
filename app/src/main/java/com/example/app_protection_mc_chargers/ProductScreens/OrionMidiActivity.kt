@@ -75,7 +75,7 @@ fun OrionMidiVariationsTable() {
                 "Προτείνεται σύμφωνα με το EN 60364 εγκατάσταση αντικεραυνικής προστασίας SPD Type 2 στον πίνακα διανομής, σε περίπτωση επιλογής μοντέλου που δεν το συμπεριλαμβάνει"
             ),
             cablingRequirements = listOf(
-                "3x10mm² (μήκος καλωδίωσης έως 60m",
+                "3x10mm² (μήκος καλωδίωσης έως 60m)",
                 "3x16mm² (μήκος καλωδίωσης >60m)"
             )
         )
@@ -83,7 +83,7 @@ fun OrionMidiVariationsTable() {
         Divider(modifier = Modifier.padding(vertical = 8.dp))
 
         ProductVariationDetails(
-            variationName = "Orion Midi 22KW",
+            variationName = "ORION Midi 22KW",
             safetyMeasures = listOf(
                 "Ενσωματωμένη ανίσχευση DC ρεύματος διαρροής 6mA (σύμφωνα με το EN 62955)",
                 "Δυνατότητα ενσωματωμένου αντιηλεκτροπληξιακού ρελέ διαρροής RCD Type A",

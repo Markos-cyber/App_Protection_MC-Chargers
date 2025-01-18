@@ -84,7 +84,7 @@ fun Orion2x11_2x22VariationsTable() {
         Divider(modifier = Modifier.padding(vertical = 8.dp))
 
         ProductVariationDetails(
-            variationName = "Orion 2x22CBS & 2x22CGB",
+            variationName = "ORION 2x22CBS & 2x22CGB",
             safetyMeasures = listOf(
                 "Αντικεραυνική προστασία SPD Type 2",
                 "Ενσωματωμένο αντιηλεκτροπληξιακό ρελέ διαρροής RCD Type B με ανίχνευση AC ρευμάτων 30mA & DC smooth ρευμάτων 6mA ανά έξοδο φόρτισης (2x RCD Type B)",
@@ -115,7 +115,7 @@ fun ProductVariationDetails(
         )
 
         Text(
-            text = "Safety Measures:",
+            text = "Μέσα Προστασίας:",
             style = TextStyle(fontSize = 16.sp, color = Color.Gray),
             modifier = Modifier.padding(bottom = 4.dp)
         )
@@ -124,7 +124,7 @@ fun ProductVariationDetails(
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
-            text = "Cabling Requirements:",
+            text = "Διατομή Καλωδίου:",
             style = TextStyle(fontSize = 16.sp, color = Color.Gray),
             modifier = Modifier.padding(bottom = 4.dp)
         )

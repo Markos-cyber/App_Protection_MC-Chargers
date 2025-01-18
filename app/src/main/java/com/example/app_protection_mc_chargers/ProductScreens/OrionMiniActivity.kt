@@ -83,7 +83,7 @@ fun OrionMiniVariationsTable() {
         Divider(modifier = Modifier.padding(vertical = 8.dp))
 
         ProductVariationDetails(
-            variationName = "Orion Mini-22HG",
+            variationName = "ORION Mini-22HG",
             safetyMeasures = listOf(
                 "Ενσωματωμένη Ανίχνευση DC ρεύματος διαρροής 6mA (σύμφωνα με το ΕΝ 62955)",
                 "Ανίχνευση Απώλειας Γείωσης",
