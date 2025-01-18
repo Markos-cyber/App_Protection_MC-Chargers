@@ -31,6 +31,7 @@
         <activity android:name=".Orion2x11_2x22Activity" />
         <activity android:name=".PrismaActivity" />
         <activity android:name=".POSeidonActivity" />
+        <activity android:name=".PrismaDetailsActivity" />
     </application>
 
 </manifest>

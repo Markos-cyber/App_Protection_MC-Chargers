@@ -112,7 +112,7 @@ fun GridScreen(navController: NavController) {
                             singleLine = true
                         )
                     } else {
-                        Text("PRODUCTS", style = MaterialTheme.typography.titleLarge)
+                        Text("ΦΟΡΤΙΣΤΕΣ", style = MaterialTheme.typography.titleLarge)
                     }
                 },
                 actions = {
